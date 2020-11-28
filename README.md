@@ -2,6 +2,10 @@
 
 Simple system for real-time playing card detection, written in Python
 
+### Usage
+
+`python3 CardDetector.py`
+
 ### Used modules
 
 - OpenCV
