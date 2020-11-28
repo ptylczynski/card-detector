@@ -39,22 +39,22 @@ for frame in stram:
 
 Całkowite wymiary pobieranego obrazu to 1280x720 pixeli. Jest to spowodowane dobrą proporcją mocy obliczeniowej potrzebnej do analizy takiego obrazu a samą jakością obrazu.
 
-![step1](images/step1.png)
+![step1](../images/step1.png)
 
 #### 2. Wydzielenie kart z obrazu
 
 Wydzielanie poszczególnych kart odbywa się na zasadzie wyszarzania, rozmazywanie i thresholdingu obrazu pobranego w poprzednim kroku. Wartość porogowa podczas thresholdingu jest ustalana dynamicznie na podstawie środkowego piksela w najwyższym rzędzie obrazu. Następnie za pomocą funkcji wbudowanych w bibliotekę OpenCV wyznaczany jest obwód poszczególnych kart. Każdy wykryty obwód jest sprawdzany pod kątem ilości posiadanych narożników (conajmniej 4) i zajmowanego pola. Pozytywne przejście testów sprawia, że analizowany obwód jest akceptowany jako karta.
 
-![step2](images/step2.png)
-![step22](images/step22.png)
+![step2](../images/step2.png)
+![step22](../images/step22.png)
 
 #### 3. Wydzielenie koloru i wartości karty
 
 Ze względu na właściwość kart do gry jaką jest stałe miejsce występowania wartości i koloru niezależnie od orientacji karty - góra, dół - operacja wydzielania cech karty jest łatwa. Wystarczy tylko wyciąć z obrazu karty jej odpowiedni kawałek, tj. lewy górny narożnik. Następnie należy porównać go z bazą dostępnych kolorów i wartości.
 
-![step3](images/step31.png)
-![step33](images/step35.png)
-![step32](images/step33.png)
+![step3](../images/step31.png)
+![step33](../images/step35.png)
+![step32](../images/step33.png)
 
 #### 4. Nałożenie rezultatów klasyfikacji na obraz wyjściowy
 
@@ -66,28 +66,28 @@ Jest to tylko jeden z proponowanych sposobów prezentacji wyników, w którym na
 
 W przypadku pojedynczych kart prezentowany algorytm działa z blisko 100% skutecznością, rozpoznając karty we wszystkich prezentowanych przypadkach
 
-![one_1](images/one_1.png)
-![one_2](images/one_2.png)
-![one_3](images/one_3.png)
-![one_4](images/one_4.png)
+![one_1](../images/one_1.png)
+![one_2](../images/one_2.png)
+![one_3](../images/one_3.png)
+![one_4](../images/one_4.png)
 
 ### Dwie karty
 
 Tak jak w przypadku pojednyczych kart algorytm radzi sobie bardzo dobrze. Problematyczne natomiast są sytuacje, w których karty nachodzą na siebie.
 
-![two_1](images/two_1.png)
-![two_2](images/two_2.png)
-![two_3](images/two_3.png)
-![two_4](images/two_4.png)
+![two_1](../images/two_1.png)
+![two_2](../images/two_2.png)
+![two_3](../images/two_3.png)
+![two_4](../images/two_4.png)
 
 ### Trzy i więcej kart
 
 Tak jak w przypadku dwóch kart algorytm wykazuje wysoką efektywność, o ile karty nie nachodzą na siebie.
 
-![three_1](images/three_1.png)
-![three_2](images/three_2.png)
-![three_3](images/three_3.png)
-![three_4](images/three_4.png)
+![three_1](../images/three_1.png)
+![three_2](../images/three_2.png)
+![three_3](../images/three_3.png)
+![three_4](../images/three_4.png)
 
 ## Podsumowanie
 
